@@ -1,0 +1,204 @@
+html {
+    height: 100%;
+}
+
+/* Header and Title styling */
+
+header {
+    width:100%;
+    height:120px;
+    background:darkred;
+    position:absolute; 
+    border-style: groove;
+    border-color: black;
+    border-width: thin;
+    margin-bottom: 2px;
+    top:0;          
+    left:0;            
+}
+
+.title {
+    text-align: center;
+    color: white;
+    font-family: cursive;
+    font-size: 60px;
+}
+
+/* Top navbar */
+
+.topnav {
+    opacity: 100%;
+    width: auto;
+    padding-top: 2px;
+    background-color: darkred;
+    overflow: hidden;
+}
+
+/* Styling navbar links */
+.topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: left;
+    padding: 4px 6px;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+/* Nav links change color on hover */
+.topnav a:hover {
+    background-color: cornflowerblue;
+    color: black;
+}
+
+body {
+    height: 100%;
+    width: auto;
+    overflow-x: hidden;
+    margin-top: 10px;
+
+/* Background Image */
+
+    background-image: url(louisville-skyline.jpg);
+    height: 100%;    
+    
+/* Center and Scale */
+    
+    background-position: center;
+    background-repeat: repeat-y;
+    background-size: cover;
+} 
+
+/* Stock Ticker */
+
+.ticker {
+    margin-top: 140px;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-right: 0px;
+    background-color: white;
+    display: inline-block;
+}
+
+/* Disable Search Bar on stock ticker */
+
+.search {
+    display: none;
+}
+
+/* Embed Chicken Document */
+
+.embedly-card {
+    float: left;
+    width: 100%;
+    margin-top: 140px;
+    padding-left: 5px;
+    padding-right: 5px;
+    opacity: 0%;
+}
+
+blockquote {
+    display: block;
+    width: 100%
+    margin: 1em;
+}
+
+
+/* Embedded Wiki and town homepage */
+
+iframe {
+    margin-top: 120px;
+    width: 98%;
+    height: 98%;
+}
+
+/* Sticky Footer */
+
+footer {
+    width:100%;
+    height:40px;
+    padding-top:10px;
+    background:darkred;
+    border-style: groove;
+    border-color: black;
+    border-width: thin;
+    font-weight:normal;
+    color:white;
+    font-size:25px;
+    text-align:center;
+    position:fixed; 
+    bottom:0;          
+    left:0;            
+}
+
+/* Contact Form */
+
+#contactForm {
+    margin: 140px auto 25px auto;
+    padding-bottom: 10px;
+    background-color: lightskyblue;
+    border-style: groove;
+    border-color: black;
+    border-width: thin;
+    text-align: center;
+    max-width: 550px;
+    min-width: 400px;    
+}
+
+/* Form styling */
+
+input {
+    width: 400px;
+    border-style: inset;
+    border-bottom-color: black;
+    border-width: thin;
+}
+
+/* Submit Button */
+
+button {
+    width: 200px;
+    height: 40px;
+    padding: 3px;
+    margin-top: 5px;
+    border-style: groove;
+    border-color: black;
+    border-width: thin;
+
+    font-size: 24px;
+    color: black;
+    background-color: gold;
+}
+
+
+// Media Queries
+
+@media (max-width: 600px) { 
+    .embedly-card {
+    margin-top: 160px;
+    }
+
+
+}
+
+
+@media (max-width: 900px) { 
+    
+    /* Reduce Title Size and anchor Left on resize */
+    .title {
+        text-align: left;
+        font-size: 40px;
+        margin-left: 20px;
+        margin-top: 30px;      
+    }
+    
+    .topnav a {
+    margin-left: 10px;
+    font-size: 15px;
+}
+
+    
+    
+}
+
+
+@media (max-width: 1200px) { ... }
