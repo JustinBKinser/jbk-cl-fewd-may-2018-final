@@ -36,7 +36,6 @@ header {
 
 /* Styling navbar links */
 .topnav a {
-    float: left;
     color: #f2f2f2;
     text-align: left;
     padding: 4px 6px;
@@ -54,7 +53,7 @@ body {
     height: 100%;
     width: auto;
     overflow-x: hidden;
-    margin-top: 10px;
+    margin-top: 130px;
 
 /* Background Image */
 
@@ -170,11 +169,125 @@ button {
 }
 
 
-// Media Queries
+/* Hamburger Menu */
+
+ul {
+  list-style: none;
+  margin: 0 0 0 15px;
+  padding: 5px;
+}
+
+* {
+  -moz-transition: all .4s cubic-bezier(.1,.7,.3,1);
+  -webkit-transition: all .4s cubic-bezier(.1,.7,.3,1);
+  -o-transition: all .4s cubic-bezier(.1,.7,.3,1);
+  -ms-transition: all .4s cubic-bezier(.1,.7,.3,1);
+  transition: all .4s cubic-bezier(.1,.7,.3,1);
+}
+
+/*** Hamburger ***/
+.hamburger {
+  display: none;
+  overflow: hidden;
+  position: relative;
+}
+
+.hamburger__layer {
+  background-color: #fff;
+  border-radius: 1px;
+  display: block;
+  height: 2px;
+  overflow: hidden;
+  position: absolute;
+    left: 5px;
+  width: 20px;
+}
+
+.hamburger__layer--top { 
+  top: 9px; 
+}
+.is-open .hamburger__layer--top { 
+  top: 17px;
+  left: 5px;
+  transform: rotate(45deg);
+}
+
+.hamburger__layer--mid { 
+  top: 16px;  
+}
+.is-open .hamburger__layer--mid { 
+  opacity: 0;
+  left: 0; 
+}
+
+.hamburger__layer--btm { 
+  top: 23px;
+}
+.is-open .hamburger__layer--btm { 
+  top: 17px;
+  left: 5px;
+  transform: rotate(-45deg);
+}
+
+/*** Shy menu ***/
+.shy-menu { 
+  display: block;
+  height: 15px;
+  overflow: hidden;
+  padding: 10px 5px;
+  width: auto;
+  
+  background-color: rgba(33,40,44,.1);
+  border-bottom-right-radius: 10px;
+  color: #fff;
+}
+.shy-menu.is-open,
+.shy-menu:hover { 
+  background-color: rgba(33,40,44,1);
+}
+
+.shy-menu.is-open {
+  height: 150px;
+  width: 100px;
+}
+
+.shy-menu__panel {
+  margin: 25px 0 0 10px;
+}
+
+.is-open .shy-menu__panel { 
+  margin-left: 0;
+}
+
+.shy-menu__hamburger {
+  cursor: pointer;
+  height: 35px;
+  width: 35px;
+}
+
+
+/* Media Queries */
 
 @media (max-width: 600px) { 
+    
+    .topnav a {
+    display: none;
+    }
+
+.hamburger {
+  display: block;
+    }
+
     .embedly-card {
     margin-top: 160px;
+    }
+    
+    /* Reduce Title Size and anchor Left on resize */
+    .title {
+        text-align: left;
+        font-size: 25px;
+        margin-left: 5px;
+        margin-top: 5px;      
     }
 
 
@@ -194,11 +307,8 @@ button {
     .topnav a {
     margin-left: 10px;
     font-size: 15px;
+    }
+
 }
 
-    
-    
-}
 
-
-@media (max-width: 1200px) { ... }
